@@ -5,7 +5,7 @@ const router = Router();
 router.post("/message-sent", (req, res) => {
   const { url } = req.body;
   console.log(url);
-  exec(`curl ${url}`, (error, stdout, stderr) => {
+  exec("./multithreading", (error, stdout, stderr) => {
     if (error) {
       console.error(`error: ${error.message}`);
       return;

@@ -3,3 +3,4 @@ node_modules
 /target
 Cargo.lock
 *.js
+package-lock.json
