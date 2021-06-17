@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div align="center">
+      <h1>put here the url</h1>
+    </div>
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card">
+            <div class="card-body">
+              <form
+                name="myForm"
+                action="/message-sent"
+                method="POST"
+                onsubmit="return validateForm()"
+              >
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="url"
+                    class="form-control"
+                    placeholder="nombre"
+                    autofocus
+                  />
+                </div>
+                <button class="btn btn-primary btn-block">submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>nose</p>
+  </body>
+</html>
