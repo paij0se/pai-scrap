@@ -2,5 +2,6 @@ node_modules
 .env
 /target
 Cargo.lock
-*.js
+main.js
+routes/index.js
 package-lock.json

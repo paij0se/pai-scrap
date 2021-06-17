@@ -1,28 +1,19 @@
-use rand::seq::SliceRandom;
 use regex::Regex;
+use std::env;
 use std::process::{Command, Stdio};
 use std::thread;
 
 fn threads() {
-    let url = "https://github.com/ELPanaJose"; // Here you put the url
-    let samples = vec![
-        "https://github.com/ELPanaJose/",
-        "https://boards.4chan.org/s4s/",
-        "https://www.youtube.com",
-        "https://paijose.tk",
-    ];
-    let sample: Vec<_> = samples
-        .choose_multiple(&mut rand::thread_rng(), 1)
-        .collect();
-    println!("{:?}", sample); // just pick a random string from the vector
+    let test = env::var("URL").expect("Expected a URL");
     const NTHREADS: u32 = 2; // number of threads
     let mut children = vec![];
 
     for i in 0..NTHREADS {
+        let test = test.clone();
         children.push(thread::spawn(move || {
             println!("this is thread number {}", i);
             let ou = Command::new("curl")
-                .arg(url)
+                .arg(test)
                 .stdout(Stdio::piped())
                 .output()
                 .expect("Failed to execute command");
@@ -44,5 +35,4 @@ fn threads() {
 
 fn main() {
     threads();
-    println!("lmao");
 }
