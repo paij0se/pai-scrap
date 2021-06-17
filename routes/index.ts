@@ -17,6 +17,7 @@ router.post("/url-sent", (req, res) => {
     }
 
     console.log(`${stdout}`);
+    res.write(`<p>${stdout}</p>`);
   });
 });
 

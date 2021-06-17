@@ -8,10 +8,9 @@ fn threads() {
     const NTHREADS: u32 = 2; // number of threads
     let mut children = vec![];
 
-    for i in 0..NTHREADS {
+    for _i in 0..NTHREADS {
         let test = test.clone();
         children.push(thread::spawn(move || {
-            println!("this is thread number {}", i);
             let ou = Command::new("curl")
                 .arg(test)
                 .stdout(Stdio::piped())
