@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc *.ts && cd routes && npx tsc *.ts &&cd ..&& nodemon main.js",
-    "heroku": "node main.js"
+    "dev": "npx tsc *.ts && cd routes && npx tsc *.ts &&cd ..&& nodemon main.js",
+    "start": "node main.js"
+
   },
   "keywords": [],
   "author": "",
