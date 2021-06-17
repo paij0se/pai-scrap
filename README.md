@@ -10,7 +10,9 @@
   
 first compile the scrapper with `cargo run`
   
-then move the bin file that is on `/target/debug/multithreading `  to the main directory
+then move the bin file that is on `/target/debug/multithreading `  to the main directory (if you are on linux is not necessary )
+  
+then install the dependencies `npm i`
   
 and finally run `npm run dev`
   
