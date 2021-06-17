@@ -34,4 +34,5 @@ fn threads() {
 
 fn main() {
     threads();
+    // 🦀
 }
