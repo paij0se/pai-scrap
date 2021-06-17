@@ -8,13 +8,11 @@
 
 <h1>want to run it locally?</h1>
   
-first compile the scrapper with `cargo run`
+- first compile the scrapper with `cargo run` then move the bin file that is on `/target/debug/multithreading` to the main directory (if you are on linux is not necessary)
   
-then move the bin file that is on `/target/debug/multithreading `  to the main directory (if you are on linux is not necessary )
+- and install the dependencies `npm i`
   
-then install the dependencies `npm i`
-  
-and finally run `npm run dev`
+- and finally run `npm run dev`
   
  
 </div>
