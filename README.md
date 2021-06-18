@@ -21,5 +21,6 @@
 
 - a nice look of the page
 
+- put an option to render the images
 
 </div>
