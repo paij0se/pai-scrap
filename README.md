@@ -15,4 +15,11 @@
 - and finally run `npm run dev`
   
  
+<h1>todo</h1>
+
+- a better fronted
+
+- a nice look of the page
+
+
 </div>
