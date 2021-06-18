@@ -18,7 +18,7 @@ router.post("/url-sent", (req, res) => {
 
     console.log(`${stdout}`);
 
-    res.write(`<h1 align="center">Images</h1> ${stdout}<br>`);
+    res.write(`<h1 align="center">All the Images (jpg,png,gif)</h1> <p align="center">${stdout}</p> <footer align="center">Note: Not in all pages is going to work </footer>`);
   });
 });
 
