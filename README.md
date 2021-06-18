@@ -4,7 +4,7 @@
 
 <p>a simple page that scrap you the images from an url page!</p>
 
-<img src="https://cdn.discordapp.com/attachments/854365333312765962/855269186669641728/ezgif.com-gif-maker_1.gif">
+<img src="https://cdn.discordapp.com/attachments/809534170463600700/855589543583809536/ezgif.com-gif-maker.gif">
 
 <h1>want to run it locally?</h1>
   
