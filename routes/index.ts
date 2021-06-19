@@ -17,9 +17,17 @@ router.post("/url-sent", (req, res) => {
     }
 
     console.log(`${stdout}`);
-
-    res.write(`<h1 align="center">All the Images (jpg,png,gif), scrapping: ${url}</h1> <p align="center">${stdout}</p> <footer align="center">Note: Not in all pages is going to work </footer>`);
+    if (stdout === "") {
+      res.write(
+        `<h1 align="center">Error check your url: ${url}, or there is not images in the DOM (Document Object Model) :( </h1>`
+      );
+    } else {
+      res.write(
+        `<h1 align="center">All the Images (jpg,png,gif), scrapping: ${url}</h1> <p align="center">${stdout}</p>`
+      );
+    }
   });
 });
 
 module.exports = router;
+
