@@ -18,11 +18,11 @@ router.post("/url-sent", (req, res) => {
 
     console.log(`${stdout}`);
     if (stdout === "") {
-      res.write(
+      res.send(
         `<h1 align="center">Error check your url: ${url}, or there is not images in the DOM (Document Object Model) :( </h1>`
       );
     } else {
-      res.write(
+      res.send(
         `<h1 align="center">All the Images (jpg,png,gif), scrapping: ${url}</h1> <p align="center">${stdout}</p>`
       );
     }
