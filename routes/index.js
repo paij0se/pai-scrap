@@ -15,7 +15,7 @@ router.post("/url-sent", function (req, res) {
         }
         console.log("" + stdout);
         if (stdout === "") {
-            res.send("<h1 align=\"center\">Error check your url: <h2 align=\"center\">" + url + "</h2>, or there is not images in the DOM (Document Object Model) :( </h1>");
+            res.send("<h1 align=\"center\">Error check your url:</h1> <h2 align=\"center\">" + url + "</h2>  <h1 align=\"center\">or there is not images in the DOM (Document Object Model) :( </h1>");
         }
         else {
             res.send("<h1 align=\"center\">All the Images (jpg,png,gif,jpeg), scrapping: <h2 align=\"center\">" + url + "</h2></h1> <p align=\"center\">" + stdout + "</p>");
