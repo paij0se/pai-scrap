@@ -18,7 +18,7 @@ fn threads() {
                 .expect("Failed to execute command");
 
             //let re = Regex::new(r"(https?://([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?)",).unwrap(); // match all the https and http links
-            let re = Regex::new(r"(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)").unwrap(); // match all the .png, .jpg, .gif https and http links
+            let re = Regex::new(r"(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|jpeg|png)").unwrap(); // match all the .png, .jpg, .gif https and http links
             let output = String::from_utf8(ou.stdout).unwrap();
             let formated = re.find_iter(&output);
             for i in formated {
