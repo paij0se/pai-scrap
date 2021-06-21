@@ -5,7 +5,7 @@ use std::thread;
 
 fn threads() {
     let test = env::var("URL").expect("Expected a URL");
-    const NTHREADS: u32 = 2; // number of threads
+    const NTHREADS: u32 = 1; // number of threads
     let mut children = vec![];
 
     for _i in 0..NTHREADS {
