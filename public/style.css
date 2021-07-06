@@ -1,5 +1,5 @@
 body {
-  background-color:#F1E4FF;
+  background-color:#23272a;
   text-align: center;
 }
 .center {
@@ -13,5 +13,10 @@ body {
 }
 
 footer a {
-  color: black;
+  color: white;
 }
+
+h1 {
+color:white
+}
+
