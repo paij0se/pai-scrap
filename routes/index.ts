@@ -1,8 +1,15 @@
 const { Router } = require("express");
 const { exec } = require("child_process");
 const router = Router();
+const rateLimit = require("express-rate-limit");
 
-router.post("/url-sent", (req, res) => {
+const limiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 60, // limit 10 request for minute
+  message: ({out:"HTTP ERROR 429 to many requests"}),
+});
+
+router.post("/url-sent",limiter, (req, res) => {
   const { url } = req.body;
   console.log(url);
   exec(`URL=${url} ./multithreading`, (error, stdout, stderr) => {

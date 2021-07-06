@@ -1,7 +1,13 @@
 var Router = require("express").Router;
 var exec = require("child_process").exec;
 var router = Router();
-router.post("/url-sent", function (req, res) {
+var rateLimit = require("express-rate-limit");
+var limiter = rateLimit({
+    windowMs: 1 * 60 * 1000,
+    max: 60,
+    message: ({ out: "HTTP ERROR 429 to many requests" })
+});
+router.post("/url-sent", limiter, function (req, res) {
     var url = req.body.url;
     console.log(url);
     exec("URL=" + url + " ./multithreading", function (error, stdout, stderr) {
